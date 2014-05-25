@@ -192,10 +192,31 @@ end
 
 
 
+######################
+
+#Bad code
+
+def search_index(games, search_term)
+  search_index = games.find_index(search_term)
+  search_index ||="Not Found"
+  if search_index
+    search_index
+  else
+    "Not Found"
+  end
+end
+
+
+#Good code
+
+def search_index(games, search_term)
+ games.find_index(search_term) || "Not Found"
+end
 
 
 
 
+######################
 
 
 
